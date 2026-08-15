@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Learning Resources — English WITH BROHI Sir</title>
+<meta name="description" content="Free English grammar tips, common mistakes, and vocabulary lists for students in Classes 6–8." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Free Learning Resources</span>
+    <h1>A few lessons, on the house.</h1>
+    <p class="lead">Bite-sized grammar tips and vocabulary lists, free for every student — whether you're enrolled with us or not. Tap any topic to expand it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div style="max-width:760px; margin:0 auto;">
+
+      <div class="accordion-item reveal">
+        <button class="accordion-trigger">
+          <span>📖 "Has" vs "Have" — the rule students always mix up</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="accordion-panel">
+          <p><strong>Use "has"</strong> with he, she, it, and singular nouns: <em>"She has a book." "The dog has a bone."</em></p>
+          <p><strong>Use "have"</strong> with I, you, we, they, and plural nouns: <em>"I have a book." "The dogs have bones."</em></p>
+          <p>Quick trick: if you can replace the subject with "he/she/it," use <strong>has</strong>. If you can replace it with "they/we," use <strong>have</strong>.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal">
+        <button class="accordion-trigger">
+          <span>📖 Present Simple vs Present Continuous</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="accordion-panel">
+          <p><strong>Present Simple</strong> is for habits and facts: <em>"I walk to school every day."</em></p>
+          <p><strong>Present Continuous</strong> is for actions happening right now: <em>"I am walking to school right now."</em></p>
+          <p>Common mistake: saying <em>"I am agree"</em> instead of <em>"I agree"</em> — feeling verbs like agree, know, and like are almost never used in continuous form.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal">
+        <button class="accordion-trigger">
+          <span>📖 5 Common Mistakes in Class 6–8 Writing</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="accordion-panel">
+          <p>1. "He don't like it" → should be <strong>"He doesn't like it"</strong></p>
+          <p>2. "I am understanding it" → should be <strong>"I understand it"</strong></p>
+          <p>3. "More better" → should be simply <strong>"better"</strong></p>
+          <p>4. "Discuss about" → should be <strong>"discuss"</strong> (no "about" needed)</p>
+          <p>5. "Since 3 years" → should be <strong>"for 3 years"</strong></p>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal">
+        <button class="accordion-trigger">
+          <span>🔤 15 Vocabulary Words for Class 7–8 Comprehension</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="accordion-panel">
+          <p><strong>Diligent</strong> — hardworking and careful &nbsp;·&nbsp; <strong>Reluctant</strong> — unwilling &nbsp;·&nbsp; <strong>Vivid</strong> — bright and clear &nbsp;·&nbsp; <strong>Ancient</strong> — very old &nbsp;·&nbsp; <strong>Enormous</strong> — extremely large</p>
+          <p><strong>Fragile</strong> — easily broken &nbsp;·&nbsp; <strong>Generous</strong> — willing to give &nbsp;·&nbsp; <strong>Cautious</strong> — careful of danger &nbsp;·&nbsp; <strong>Frequent</strong> — happening often &nbsp;·&nbsp; <strong>Genuine</strong> — real, sincere</p>
+          <p><strong>Isolated</strong> — alone, separated &nbsp;·&nbsp; <strong>Merge</strong> — to combine &nbsp;·&nbsp; <strong>Obstacle</strong> — a barrier &nbsp;·&nbsp; <strong>Persuade</strong> — to convince &nbsp;·&nbsp; <strong>Reveal</strong> — to show something hidden</p>
+        </div>
+      </div>
+
+      <div class="accordion-item reveal">
+        <button class="accordion-trigger">
+          <span>🗣️ 5 Sentence Starters for Confident Speaking</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="accordion-panel">
+          <p>"In my opinion, ..." — for sharing a view</p>
+          <p>"I believe this is because ..." — for explaining reasoning</p>
+          <p>"On the other hand, ..." — for giving a contrast</p>
+          <p>"For example, ..." — for backing up a point</p>
+          <p>"To sum up, ..." — for closing a thought clearly</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="center" style="margin-top:44px;">
+      <p class="lead" style="margin:0 auto 20px;">Want lessons like this, structured into a full course with feedback and practice?</p>
+      <a href="register.html" class="btn btn-marigold">📝 Join a Free Trial Class</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="site-footer"></footer>
+<div id="wa-float"></div>
+<script src="js/main.js"></script>
+<script>
+  document.querySelectorAll(".accordion-trigger").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".accordion-item");
+      const panel = item.querySelector(".accordion-panel");
+      const isOpen = item.classList.contains("open");
+
+      document.querySelectorAll(".accordion-item.open").forEach((openItem) => {
+        if (openItem !== item) {
+          openItem.classList.remove("open");
+          openItem.querySelector(".accordion-panel").style.maxHeight = null;
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove("open");
+        panel.style.maxHeight = null;
+      } else {
+        item.classList.add("open");
+        panel.style.maxHeight = panel.scrollHeight + 40 + "px";
+      }
+    });
+  });
+</script>
+</body>
+</html>

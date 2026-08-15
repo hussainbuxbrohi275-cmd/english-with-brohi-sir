@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Registration — English WITH BROHI Sir</title>
+<meta name="description" content="Register your child for a free trial class at English WITH BROHI Sir. Grammar and Spoken English for Classes 6–8." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Student Registration</span>
+    <h1>Register for a free trial class.</h1>
+    <p class="lead">Fill in the form below — it opens WhatsApp with your details pre-filled, so our coordinator can confirm your trial class time directly with you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="hero-grid" style="align-items:flex-start;">
+      <div class="card reveal">
+        <form id="registration-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="studentName">Student's Full Name *</label>
+              <input type="text" id="studentName" name="studentName" required>
+            </div>
+            <div class="form-field">
+              <label for="guardianName">Father's / Guardian's Name *</label>
+              <input type="text" id="guardianName" name="guardianName" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="studentClass">Class *</label>
+              <select id="studentClass" name="studentClass" required>
+                <option value="">Select class</option>
+                <option>Class 6</option>
+                <option>Class 7</option>
+                <option>Class 8</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="age">Age *</label>
+              <input type="number" id="age" name="age" min="9" max="16" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="course">Course Interested In *</label>
+            <select id="course" name="course" required>
+              <option value="">Select a course</option>
+              <option>English Grammar</option>
+              <option>Spoken English</option>
+              <option>Grammar + Spoken English (Combined)</option>
+              <option>Not sure — please advise</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Phone / WhatsApp Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="03XX-XXXXXXX" required>
+            </div>
+            <div class="form-field">
+              <label for="city">Village / City *</label>
+              <input type="text" id="city" name="city" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="classTime">Preferred Class Time (optional)</label>
+            <input type="text" id="classTime" name="classTime" placeholder="E.g. after 4 PM">
+          </div>
+
+          <button type="submit" class="btn btn-marigold btn-block">📝 Submit via WhatsApp</button>
+          <p id="form-status" style="margin-top:14px; font-size:0.9rem; min-height:1.2em;"></p>
+        </form>
+      </div>
+
+      <div>
+        <div class="card reveal" style="margin-bottom:20px;">
+          <h3>📌 What happens next?</h3>
+          <ul style="color:var(--ink-soft); padding-left:20px; display:grid; gap:8px; margin:0;">
+            <li>Your registration opens as a WhatsApp message to our academy</li>
+            <li>Our coordinator confirms a free trial class time within 24 hours</li>
+            <li>After the trial, we recommend the right batch and fee plan</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="background: var(--ink);">
+          <h3 style="color:var(--paper);">Prefer to talk first?</h3>
+          <p style="color:#C3CAE0;">Message us directly on WhatsApp with any questions before registering.</p>
+          <a href="#" id="register-wa" class="btn btn-whatsapp btn-block">📱 Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" id="site-footer"></footer>
+<div id="wa-float"></div>
+<script src="js/main.js"></script>
+<script src="js/register.js"></script>
+<script>
+  document.getElementById("register-wa").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.open(waLink("Assalam-o-Alaikum! I have a question before registering my child."), "_blank");
+  });
+</script>
+</body>
+</html>
